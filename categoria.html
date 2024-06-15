@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Categorias</title>
+    <link rel="stylesheet" href="assets/css/categorias.css"> <!-- Importa o arquivo CSS externo -->
+</head>
+<body>
+    <header>
+        Gerenciar Categorias
+    </header>
+    <div class="container">
+        <h1>Lista de Categorias</h1>
+
+        <!-- Tabela de Categorias -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Cor</th>
+                    <th>Gastos</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCategorias">
+                <!-- Dados serão carregados aqui -->
+            </tbody>
+        </table>
+
+        <!-- Formulário para adicionar categoria -->
+        <div class="form-group">
+            <h2>Adicionar Categoria</h2>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" required>
+            <label for="cor">Cor:</label>
+            <select id="cor">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+            </select>
+            <label for="gastos">Gastos:</label>
+            <input type="checkbox" id="gastos">
+            <button onclick="salvarCategoria()">Salvar Categoria</button>
+        </div>
+    </div>
+
+    <script src="assets/js/categorias.js"></script> <!-- Importa o arquivo JavaScript externo -->
+</body>
+</html>

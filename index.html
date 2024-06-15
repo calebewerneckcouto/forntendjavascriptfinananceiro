@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Financeiro</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Importa o arquivo CSS externo -->
+    <style>
+        /* Estilos CSS embutidos aqui, se necessário */
+    </style>
+</head>
+<body>
+    <header>
+        Sistema Financeiro
+    </header>
+    <div class="box">
+        <button onclick="navigateToCategoriaPage()">Gerenciar Categorias</button>
+    </div>
+    
+    <div class="container">
+        <div class="box month-navigation">
+            <button id="prevMonth">&larr; Voltar</button>
+            <span id="currentMonth">Junho</span>
+            <button id="nextMonth">Avançar &rarr;</button>
+        </div>
+
+        <div class="box total-container">
+            <h2>Total:</h2>
+            <div id="totalValor" class="total-valor"></div>
+        </div>
+
+        <div class="box">
+            <div class="form-group">
+                <label for="categoria">Categoria</label>
+                <select id="categoria">
+                    <!-- Opções serão carregadas aqui pela API -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="data">Data</label>
+                <input type="date" id="data">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao">
+            </div>
+
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" step="0.01">
+            </div>
+            
+            <div class="form-group">
+                <button onclick="salvarItem()">Salvar</button>
+            </div>
+        </div>
+        <div class="box table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Categoria</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="dadosTabela">
+                    <!-- Dados serão exibidos aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script> <!-- Importa o arquivo JavaScript externo -->
+</body>
+</html>
